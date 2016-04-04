@@ -5,7 +5,7 @@
   <div class="col-sm-6">
     <ul class="list-group">
       {{#each model.rentals as |rental|}}
-        {{rental-tile rental=rental destroyRental="destroyRental" update="update"}}
+        {{rental-tile rental=rental destroyRental="destroyRental" update="update"}} {{rental-cost rental}}
       {{/each}}
     </ul>
   </div>

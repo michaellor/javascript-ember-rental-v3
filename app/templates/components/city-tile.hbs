@@ -1,7 +1,10 @@
-<h2>{{city.name}}</h2>
+<h3>Location: {{fullLocation}}</h3>
+
+<h4>Rentals available in {{city.name}}:</h4>
+
 <ul>
-  {{#each city.rentals as |rental|}}
-    <li>{{#link-to 'rental' rental.id}}{{rental.owner}}'s {{rental.type}} {{/link-to}}</li>
+  {{#each sortedRentals as |rental|}}
+    {{rental-tile rental=rental}}
   {{/each}}
 </ul>
 
